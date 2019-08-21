@@ -1,0 +1,17 @@
+{
+  "name" : "kbide-plugin-digital-temp",
+  "title": "digital-temp",
+  "keywords": "digital-temp, esp32, esp8266, arduino",
+  "description": "digital-temp plugin for KB-IDE",
+  "category":"",
+  "git": "https://github.com/cmmc-kbide/kbide-plugin-digital-temp/",
+  "author": "cmmakerclub",
+  "email": "",
+  "url": "https://github.com/cmmc-kbide/kbide-plugin-digital-temp/",
+  "version": "1.0.0",
+  "board" : "",
+  "platform": ["arduino-esp32"],
+  "license": "",
+  "image" : "/static/display.png",
+  "homepage": "http://www.kbide.org"
+}
