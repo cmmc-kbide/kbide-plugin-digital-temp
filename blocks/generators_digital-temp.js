@@ -1,5 +1,4 @@
-module.exports = function(Blockly) {
-  Blockly.JavaScript["ky_028_digital_temp_block"] = function(block) {
+Blockly.JavaScript["ky_028_digital_temp_block"] = function(block) {
     var text_ky_028_digital_temp_analog_pin = block.getFieldValue(
       "KY_028_DIGITAL_TEMP_ANALOG_PIN"
     );
@@ -16,24 +15,23 @@ module.exports = function(Blockly) {
     );
     // TODO: Assemble JavaScript into code variable.
     var code = `
-	
-	#VARIABLE
-	int KY_028_DIGITAL_TEMP_DIGITAL_PIN = ${text_ky_028_digital_temp_digital_pin}; // KY-028 digital interface
-	int KY_028_DIGITAL_TEMP_ANALOG_PIN = ${text_ky_028_digital_temp_analog_pin}; // KY-028 analog interface
-	#END
-	
-	#SETUP
-	  pinMode(KY_028_DIGITAL_TEMP_DIGITAL_PIN, INPUT);
-	  pinMode(KY_028_DIGITAL_TEMP_ANALOG_PIN, OUTPUT);
-	  Serial.begin(9600);
-	#END
+  
+  #VARIABLE
+  int KY_028_DIGITAL_TEMP_DIGITAL_PIN = ${text_ky_028_digital_temp_digital_pin}; // KY-028 digital interface
+  int KY_028_DIGITAL_TEMP_ANALOG_PIN = ${text_ky_028_digital_temp_analog_pin}; // KY-028 analog interface
+  #END
+  
+  #SETUP
+    pinMode(KY_028_DIGITAL_TEMP_DIGITAL_PIN, INPUT);
+    pinMode(KY_028_DIGITAL_TEMP_ANALOG_PIN, OUTPUT);
+    Serial.begin(9600);
+  #END
 
-	// Read the digital interface
-  	${variable_ky_028_digital_temp_digital_value} = digitalRead(KY_028_DIGITAL_TEMP_DIGITAL_PIN); 
-  	// Read the analog interface
-  	${variable_ky_028_digital_temp_analog_value} = analogRead(KY_028_DIGITAL_TEMP_ANALOG_PIN); 
-  	delay(100);
+  // Read the digital interface
+    ${variable_ky_028_digital_temp_digital_value} = digitalRead(KY_028_DIGITAL_TEMP_DIGITAL_PIN); 
+    // Read the analog interface
+    ${variable_ky_028_digital_temp_analog_value} = analogRead(KY_028_DIGITAL_TEMP_ANALOG_PIN); 
+    delay(100);
     `;
     return code;
   };
-};
